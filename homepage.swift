@@ -51,3 +51,48 @@ struct HomePageView: View {
                 .padding(.top, 50)
             
             Spacer()
+
+            HStack {
+                Button(action: {
+                }) {
+                    VStack {
+                        Image(systemName: "house")
+                        Text("ব্যাক হোম")
+                    }
+                }
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(Color.white)
+                .foregroundColor(.red)
+                .cornerRadius(10)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.red, lineWidth: 1)
+                )
+                
+                Button(action: {
+                }) {
+                    VStack {
+                        Image(systemName: "plus.app")
+                        Text("নতুন আবেদন")
+                    }
+                }
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(Color.red)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+            }
+            .padding()
+            .background(Color.gray.opacity(0.1))
+        }
+        .background(Color.white)
+    }
+}
+
+struct HomePageView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomePageView()
+    }
+}
+
